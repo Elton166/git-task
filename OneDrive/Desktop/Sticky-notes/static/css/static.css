@@ -1,0 +1,13 @@
+/* static/css/sticky.css */
+body { background: #f8f9fa; }
+.sticky-note {
+  background: #fff8c6;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  min-height: 140px;
+}
+.note-excerpt {
+  white-space: pre-wrap;
+  color: #333;
+}
+.card { border-radius: 8px; }

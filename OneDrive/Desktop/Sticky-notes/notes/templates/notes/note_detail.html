@@ -1,0 +1,13 @@
+{% extends 'notes/base.html' %}
+{% block title %}{{ object.title }} - Sticky Notes{% endblock %}
+
+{% block content %}
+<article class="card p-3">
+  <h2>{{ object.title }}</h2>
+  <p>{{ object.content|linebreaks }}</p>
+  <p class="text-muted small">Updated: {{ object.updated_at|date:"M d, Y H:i" }}</p>
+  <a href="{% url 'notes:note-update' object.pk %}" class="btn btn-primary">Edit</a>
+  <a href="{% url 'notes:note-delete' object.pk %}" class="btn btn-danger">Delete</a>
+  <a href="{% url 'notes:note-list' %}" class="btn btn-secondary">Back</a>
+</article>
+{% endblock %}
